@@ -1,0 +1,38 @@
+.c-article
+  padding: 0 $vertical-rhytm * 2
+
+.c-article__title
+  font-weight: bold
+  text-transform: uppercase
+  line-height: $base-line-height
+
+.c-article__header
+  display: flex
+  align-items: center
+  margin-bottom: $vertical-rhytm
+  // writing-mode: vertical-lr
+  // position: absolute
+
+.c-article__header::before
+  margin-right: 10px
+  content: '\a0'
+  position: relative
+  height: 4px
+  background: rgba(green, 0.3)
+  flex-grow: 1
+
+.c-article__subtitle
+  margin-top: $vertical-rhytm
+
+.c-article__intro, .c-article__subtitle
+  color: green
+
+.c-article__title, .c-article__author
+  color: rgba(green, 0.5)
+
+.c-article__subtitle
+  font-size: $base-font-size * 1.333
+
+.c-article__intro
+  font-size: $base-font-size
+  font-style: italic
