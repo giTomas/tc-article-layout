@@ -1,0 +1,32 @@
+.c-btn-article__container
+  display: flex
+  justify-content: center
+  align-items: center
+
+.c-btn-article
+  cursor: pointer
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  font-weight: bold
+
+.c-btn-article__container::after,
+.c-btn-article__container::before,
+    content: '\a0'
+    position: relative
+    height: 4px
+    background: rgba(green, 0.3)
+    flex-grow: 1
+    // @media(max-width: 680px)
+    //  display: none
+
+.c-btn-article__container::after
+  margin-left: 10px
+
+.c-btn-article__container::before
+  margin-right: 10px
+
+// .c-btn-hidden
+  display: none
+  @media(max-width: 1285)
+    display: block

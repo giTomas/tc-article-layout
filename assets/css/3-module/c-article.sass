@@ -1,10 +1,17 @@
 .c-article
-  padding: 0 $vertical-rhytm * 2
+  // padding: 0 $vertical-rhytm * 2 $vertical-rhytm * 2
+  padding: 0 calc(1rem + 2.25vw) $vertical-rhytm * 2
+  @media(max-width: 400px)
+    padding: 0 $vertical-rhytm
 
-.c-article__title
+.c-article-banner
+  margin-bottom: $vertical-rhytm
+
+.c-article__section
   font-weight: bold
   text-transform: uppercase
   line-height: $base-line-height
+  color: rgba(green, 0.5)
 
 .c-article__header
   display: flex
@@ -20,6 +27,8 @@
   height: 4px
   background: rgba(green, 0.3)
   flex-grow: 1
+  @media(max-width: 680px)
+   display: none
 
 .c-article__subtitle
   margin-top: $vertical-rhytm
@@ -36,3 +45,33 @@
 .c-article__intro
   font-size: $base-font-size
   font-style: italic
+
+.c-article__img
+  display: block
+  max-width: 100%
+  object-fit: cover
+
+.c-article__figure
+  position: relative
+  cursor: pointer
+  &:hover
+    .c-article__caption
+      opacity: 1
+
+.c-article__caption
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: $vertical-rhytm
+  line-height: $base-line-height
+  // display: none
+  width: 100%
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(white, 0.8)
+  opacity: 0
+  transition: opacity 0.22s ease-out

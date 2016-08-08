@@ -3,3 +3,11 @@
   // column-count: 4
   column-gap: $vertical-rhytm
   column-rule: 1px solid rgba(green, 0.4)
+  margin-bottom: $vertical-rhytm
+  // column-fill: auto
+
+.l-columns > *
+  page-break-inside: avoid
+
+.l-columns > * + *
+  margin: $vertical-rhytm / 2 0
