@@ -1,7 +1,7 @@
 const Resize = (function(){
-  const imgs  = document.querySelectorAll('.js-img-resize');
-  const tl    = new TimelineLite();
-  const modal = document.getElementById('js-modal');
+  const imgs     = document.querySelectorAll('.js-img-resize');
+  const tl       = new TimelineLite();
+  const modal    = document.getElementById('js-modal');
   const modalImg = document.getElementById('js-modal-img');
   // const figure          = document.querySelectorAll('.js-figure');
   // const js              = document.querySelectorAll('.js');
@@ -10,7 +10,6 @@ const Resize = (function(){
 
   const imgResizeHandler = (e) => {
     const src    = e.currentTarget;
-
     const url    = src.dataset.url;
     const img    = src.parentNode.firstChild;
     const coords = img.getBoundingClientRect();
@@ -27,10 +26,9 @@ const Resize = (function(){
     console.log(params);
 
     tl.to(modal, 0, {display: "block", backgroundColor: "rgba(0, 0, 0, 0)"})
-      .from('#js-modal-img', 2, {scale: params.initialScale, top: params.top, left: params.left, force3D:true})
+      .from('#js-modal-img', 1, {scale: params.initialScale, top: params.top, left: params.left, force3D:true})
       .to(modal, 0.25, {backgroundColor: "rgba(0, 128, 0, 0.85)", force3D:true})
   };
-
 
   const closeHandler = () => {
     tl.to(modal, 0, {clearProps: 'all'})
@@ -39,7 +37,7 @@ const Resize = (function(){
     modalImg.removeAttribute('src');
   }
 
-  const imgsListeners      = () => {
+  const imgsListeners = () => {
     for (let i = 0; i < imgs.length; i++) {
       imgs[i].addEventListener('click', imgResizeHandler, false);
     }
