@@ -1,6 +1,6 @@
 .c-article
   // padding: 0 $vertical-rhytm * 2 $vertical-rhytm * 2
-  padding: 0 calc(1rem + 2.25vw) $vertical-rhytm * 2
+  padding: 0 $fluid $vertical-rhytm * 2
   @media(max-width: 400px)
     padding: 0 $vertical-rhytm
 
@@ -27,8 +27,8 @@
   height: 4px
   background: rgba(green, 0.3)
   flex-grow: 1
-  @media(max-width: 680px)
-   display: none
+  // @media(max-width: 680px)
+  //  display: none
 
 .c-article__subtitle
   margin-top: $vertical-rhytm
@@ -73,5 +73,12 @@
   bottom: 0
   left: 0
   background-color: rgba(white, 0.8)
+  color: rgba(green, 0.8)
   opacity: 0
   transition: opacity 0.22s ease-out
+  overflow: hidden
+  & > p
+    padding: $vertical-rhytm 0
+    border-bottom: 2px solid rgba(green, 0.5)
+    border-top: 2px solid rgba(green, 0.5)
+    // border-bottom: 4px solid lighten(green, 50%)

@@ -1,26 +1,39 @@
 .c-article-banner
   // height: 100vh
   display: flex
-  background-color: rgba(green, 0.5)
+  background:
+    image: url('img/hero.jpg')
+    size: cover
+    position: 50% 50%
+  // background-color: rgba(green, 0.5)
   cursor: pointer
   font-size: calc(1rem + 2.2vw)
+  font-size: $fluid
   text-transform: uppercase
 
 .c-article-banner__author
   writing-mode: vertical-lr
   width: calc(1rem + 2.25vw)
+  width: $fluid
   padding: 0.16em 0
+  color: white
+  // padding-right: 0.5em
   // margin-left: -0.16em
-  // flex-grow: 1
+  // flex: 1
 
 .c-article-banner__title
   // width: 100vw
-  // flex: 1
-  display: flex
-  align-items: flex-end
-  margin-left: auto
-  margin-right: calc(1rem + 2.25vw)
+  flex: 1
+  // display: flex
+  // align-items: flex-end
+  // margin-left: auto
+  padding-right: calc(1rem + 2.25vw)
+  padding-top: 0.25em
   text-align: right
+  color: white
+  text-align: right
+  align-self: flex-end
+  // background-color: rgba(white, 0.7)
   // margin-bottom: -0.16em
 
   // margin-left: calc(1rem + 4vh)
