@@ -26,8 +26,8 @@ const Resize = (function(){
     console.log(params);
 
     tl.to(modal, 0, {display: "block", backgroundColor: "rgba(0, 0, 0, 0)"})
-      .from('#js-modal-img', 1, {scale: params.initialScale, top: params.top, left: params.left, force3D:true})
-      .to(modal, 0.25, {backgroundColor: "rgba(0, 128, 0, 0.85)", force3D:true})
+      .from('#js-modal-img', 0.5, {scale: params.initialScale, top: params.top, left: params.left, force3D:true})
+      .to(modal, 0.5, {backgroundColor: "rgba(0, 0, 0, 0.85)", force3D:true}, '-=0.5')
   };
 
   const closeHandler = () => {
