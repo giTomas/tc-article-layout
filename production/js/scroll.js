@@ -3,14 +3,14 @@ const Scroll = (function(){
   const btn             = document.getElementById('js-btn-scrolltop');
   const article         = document.getElementById('js-article');
   const banner          = document.getElementById('js-banner');
-  const distanceFromTop = article.offsetTop;
+  // const distanceFromTop = article.offsetTop;
 
 
   // function with GSAP -> scroll to top
 
   //Handlers
   const scrollDownHandler = () => {
-    TweenMax.to(window, 0.33, {scrollTo: distanceFromTop})
+    TweenMax.to(window, 0.33, {scrollTo: article.offsetTop})
   };
   const scrollUpHandler   = () => {
     // console.log('?');
