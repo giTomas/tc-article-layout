@@ -10,12 +10,12 @@ const Scroll = (function(){
 
   //Handlers
   const scrollDownHandler = () => {
-    TweenMax.to(window, 0.33, {scrollTo: article.offsetTop})
+    TweenMax.to(window, 0.33, {scrollTo: article.offsetTop})  //!!
   };
   const scrollUpHandler   = () => {
     // console.log('?');
     // console.log(window);
-    TweenLite.to(window, 0.33, {scrollTo: article.offsetTop});
+    TweenLite.to(window, 0.33, {scrollTo: article.offsetTop}); //!!!
   };
 
   //event listener
@@ -36,9 +36,3 @@ const Scroll = (function(){
   };
 
 })();
-/*
-const btn = document.getElementById('js-btn-scrolltop');
-btn.onclick = function() {
-  console.log('?');
-  TweenLite.to(window, 1, {scrollTo:{y:"#js-article", offsetY:70}});
-}*/

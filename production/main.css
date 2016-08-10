@@ -123,6 +123,8 @@ p {
           flex: 1;
   padding-right: -webkit-calc(1rem + 2.25vw);
   padding-right: calc(1rem + 2.25vw);
+  padding-right: -webkit-calc(1rem + 3.5vw);
+  padding-right: calc(1rem + 3.5vw);
   padding-top: 0.25em;
   text-align: right;
   color: white;
@@ -167,7 +169,8 @@ p {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  margin-left: -4.1vw; }
 
 .c-article__subtitle {
   margin-top: 1.47rem; }
