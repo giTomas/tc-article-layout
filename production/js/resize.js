@@ -22,16 +22,22 @@ const Resize = (function(){
     const img      = src.parentNode.firstChild;
     const coords   = img.getBoundingClientRect();
     const modalImg = document.getElementById('js-modal-img');
-    const param1 = Math.round((coords.width / img.naturalWidth) * 10000) / 10000;
-    const param2 = coords.width / 2  + coords.left;
-    const param3 = coords.height / 2 + coords.top;
-    params   = {
-        initialScale: param1,
-        left: param2,
-        top: param3,
+    const param1   = Math.round((coords.width / img.naturalWidth) * 10000) / 10000;
+    const param2   = coords.width / 2  + coords.left;
+    const param3   = coords.height / 2 + coords.top;
+          params   = {
+            initialScale: param1,
+            left: param2,
+            top: param3,
         // x: coords.left,
         // y: coords.top
-      };
+          };
+    const params4 = {
+      imgHeight:  img.naturalHeight,
+      viewportHeight: w.wHeight,
+      difference: img.naturalHeight - w.wHeight
+    }
+    console.log(params4);
 
     // console.log(params);
     modalImg.setAttribute('src', url);
@@ -51,7 +57,7 @@ const Resize = (function(){
       .to(modalImg, 0, {clearProps: 'all'})
       .to(modal, 0, {clearProps: 'all'});
 
-    setTimeout(()=>{modalImg.removeAttribute('src');}, 1000)
+    setTimeout(()=> {modalImg.removeAttribute('src');}, 1000);
 
     // console.log(params);
   }
@@ -72,6 +78,7 @@ const Resize = (function(){
     // log4: console.log(coords2),
     // log5: console.log(all !== null),
     // log6: console.log(w),
+    // log7: params,
     // listeners: [
                 // modalListener
               // ],
