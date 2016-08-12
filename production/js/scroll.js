@@ -9,14 +9,8 @@ const Scroll = (function(){
   // function with GSAP -> scroll to top
 
   //Handlers
-  const scrollDownHandler = () => {
-    TweenMax.to(window, 0.33, {scrollTo: article.offsetTop})  //!!
-  };
-  const scrollUpHandler   = () => {
-    // console.log('?');
-    // console.log(window);
-    TweenLite.to(window, 0.33, {scrollTo: article.offsetTop}); //!!!
-  };
+  const scrollDownHandler = () => TweenMax.to(window, 0.22, {scrollTo: article.offsetTop}); 
+  const scrollUpHandler = () =>  TweenLite.to(window, 0.22, {scrollTo: article.offsetTop});
 
   //event listener
   const scrollUpListener   = btn.addEventListener('click', scrollUpHandler, false);

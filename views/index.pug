@@ -7,7 +7,7 @@ html(lang="sk")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title index
     link(rel="stylesheet", href="main.css")
-  body
+  body#js-page(style="opacity:0")
     main
       header#js-banner.c-article-banner
         .c-article-banner__author maroš ondrejka
@@ -48,7 +48,9 @@ html(lang="sk")
         .c-btn-article__container
           #js-btn-scrolltop.c-btn-article.c-btn-hidden hore
         #js-modal.c-modal
-          img#js-modal-img.c-modal__img(src="img/stiavnica.jpg")
+          .c-modal__overlay
+            img#js-modal-img.c-modal__img(src="img/stiavnica.jpg")
+    script(src="js/onload.js")
     script(src="js/TweenMax.min.js")
     script(src="js/ScrollToPlugin.min.js")
     script(src="js/scroll.js")

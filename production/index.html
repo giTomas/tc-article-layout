@@ -8,7 +8,7 @@
     <title>index</title>
     <link rel="stylesheet" href="main.css">
   </head>
-  <body>
+  <body id="js-page" style="opacity:0">
     <main>
       <header class="c-article-banner" id="js-banner">
         <div class="c-article-banner__author">maroš ondrejka</div>
@@ -55,9 +55,12 @@
         <div class="c-btn-article__container">
           <div class="c-btn-article c-btn-hidden" id="js-btn-scrolltop">hore</div>
         </div>
-        <div class="c-modal" id="js-modal"><img class="c-modal__img" id="js-modal-img" src="img/stiavnica.jpg"></div>
+        <div class="c-modal" id="js-modal">
+          <div class="c-modal__overlay"><img class="c-modal__img" id="js-modal-img" src="img/stiavnica.jpg"></div>
+        </div>
       </article>
     </main>
+    <script src="js/onload.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
     <script src="js/scroll.js"></script>
